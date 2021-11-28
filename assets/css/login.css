@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+	display: flex;
+	padding: 103.5px;
+	background: #ecf0f5;
+}
+
+.formWrapper {
+	margin: auto;
+	border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+	width: 870px;
+	height: 450px;
+	display: flex;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	box-shadow: 1px 1px 27px 0.1px rgba(0, 0, 0, 0.5);
+}
+
+.formWrapper .gambar {
+	width: 50%;
+	height: 100%;
+}
+
+.formWrapper .gambar::after{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.formWrapper .gambar img {
+	width: 100%;
+	height: 100%;
+}
+
+.formWrapper form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	padding: 60px;
+	width: 50%;
+	background: #fff;
+}
+
+.formWrapper form h2 {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+.formWrapper form .inputBox {
+	width: 100%;
+	height: 50px;
+	margin: 28px 0;
+	position: relative;
+}
+
+.formWrapper form .inputBox input {
+	height: 100%;
+	width: 100%;
+	border: none;
+	padding: 0 9px;
+	font-size: 18px;
+	outline: none;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-bottom: 1px solid #000;
+}
+
+.formWrapper form .inputBox input.focus {
+	background: #ecf0f5;
+	border: .5px solid #0000ff;
+}
+
+.formWrapper form .inputBox input.focus+span::before {
+	top: -19px;
+	left: 0;
+	color: #000;
+}
+
+.formWrapper form .inputBox span::before {
+	content: attr(label);
+	position: absolute;
+	top: 49.4%;
+	left: 9px;
+	color: #909090;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	z-index: 1;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+.btnSubmit {
+	padding: 8px 16px;
+	font-size: 15px;
+	border-radius: 3px;
+	color: #eee;
+	outline: none;
+	border: none;
+	background: #121122;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	cursor: pointer;
+	margin-top: 15px;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+.btnSubmit:hover {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background: #343344;
+}
+
+@media only screen and (max-width: 800px) {
+	.formWrapper .gambar {
+		display: none;
+	}
+
+	.formWrapper form {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		padding: 60px !important;
+	}
+
+	.formWrapper form {
+		padding: 40px;
+	}
+
+	.formWrapper form h2 {
+		margin-bottom: 30px;
+	}
+}

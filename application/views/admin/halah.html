@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<input type="text" name="" id="bla">
+	<button id="tbh">tambah</button>
+	<button id="mns">kurang</button>
+	<h5 id="txt">Rp. 0</h5>
+</body>
+<script>
+	document.getElementById('tbh').addEventListener('click', () => {
+		let input = document.getElementById('bla').value
+		const harga = input.replace(/[^\d]/g, '')
+		let int = parseInt(harga)
+		let text = document.getElementById('txt').textContent
+		let total = parseInt(text.replace(/[^\d]/g, ''))
+
+		int = total + int
+		input = ''
+		document.getElementById('txt').textContent = `Rp. ${int}`
+	})
+	document.getElementById('mns').addEventListener('click', () => {
+		let input = document.getElementById('bla').value
+		const harga = input.replace(/[^\d]/g, '')
+		let int = parseInt(harga)
+		let text = document.getElementById('txt').textContent
+		let total = parseInt(text.replace(/[^\d]/g, ''))
+
+		int = total - int
+		input = ''
+		document.getElementById('txt').textContent = `Rp. ${int}`
+        if(total == 0){
+            console.log(document.getElementById('mns').attributes.setNamedItem(disabled))
+        }
+	})
+
+</script>
+
+</html>
