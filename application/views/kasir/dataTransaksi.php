@@ -80,7 +80,7 @@
                                 <tr>
                                     <td><?= $trans->kode_invoice ?></td>
                                     <td><?= $nama[$no] ?></td>
-                                    <td data-total="<?= $trans->total ?>" class="total"></td>
+                                    <td class="total"><?= number_format($trans->total,0,'.',',') ?></td>
                                     <td width="40px">
                                         <input type="checkbox" name="" id="" class="form-control" disabled checked>
                                     </td>
@@ -244,9 +244,6 @@
                 infoEmpty: 'tidak ada data yang bisa ditampilkan',
                 sInfo: "Menunjukan _END_ sampai _TOTAL_"
             }
-        })
-        document.querySelectorAll('.total').forEach(v => {
-            v.textContent = formatUang(`${v.dataset.total}`)
         })
         const cetakStruk = kodeInvoice => {
             window.location.href = `http://localhost/laundry/index.php/cetakStruk/${kodeInvoice}`
