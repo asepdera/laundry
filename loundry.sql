@@ -34,7 +34,7 @@ CREATE TABLE `tb_detail_transaksi` (
   `id_paket` varchar(12) NOT NULL,
   `qty` double NOT NULL,
   `harga` int(12) NOT NULL,
-  `keterangan` text NOT NULL DEFAULT '-'
+  `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

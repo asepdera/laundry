@@ -9,10 +9,10 @@ class Admin extends CI_controller
     public function __construct()
     {
         parent::__construct();
-        $status = $this->session->userdata('status') == 'Login' && $this->session->userdata('role') == 'admin';
-        if (!$status) {
-            redirect('');
-        }
+        //$status = $this->session->userdata('status') == 'Login' && $this->session->userdata('role') == 'admin';
+        //if (!$status) {
+            //redirect('');
+        //}
         $this->load->model('aksi');
         date_default_timezone_set('Asia/Jakarta');
         // require_once APPPATH.'third_party/domcetakpdf/autoload.inc.php';
